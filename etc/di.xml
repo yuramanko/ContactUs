@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="manko_contactus_response_listing_data_source" xsi:type="string">
+                    Manko\ContactUs\Model\ResourceModel\Response\Grid\Collection
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <virtualType name="Manko\ContactUs\Model\ResourceModel\Response\Grid\Collection"
+                 type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">manko_contact_us</argument>
+            <argument name="resourceModel" xsi:type="string">Manko\ContactUs\Model\ResourceModel\Response</argument>
+        </arguments>
+    </virtualType>
+
+</config>

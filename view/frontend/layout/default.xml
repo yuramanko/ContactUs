@@ -1,0 +1,24 @@
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceBlock name="footer_links">
+            <block class="Magento\Framework\View\Element\Html\Link\Current"
+                   after="contact-us-link"
+                   name="contactus-link">
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contactus</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+         <referenceBlock name="header.links">
+            <block class="Manko\ContactUs\Block\Link" name="some_link" >
+                <arguments>
+                    <argument name="label" xsi:type="string" translate="true">Contact Us</argument>
+                    <argument name="path" xsi:type="string">contactus</argument>
+                </arguments>
+            </block>
+        </referenceBlock>
+        <referenceBlock name="contact-us-link" remove="true" />
+    </body>
+</page>

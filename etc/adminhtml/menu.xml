@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Manko_ContactUs::contactus"
+             title="Manko ContactUs"
+             module="Manko_ContactUs"
+             sortOrder="51"
+             resource="Manko_ContactUs::contactus"/>
+
+        <add id="Manko_ContactUs::response"
+             title="Response Posts"
+             module="Manko_ContactUs"
+             sortOrder="10"
+             action="manko_contactus/response"
+             resource="Manko_ContactUs::response"
+             parent="Manko_ContactUs::contactus"/>
+    </menu>
+</config>
